@@ -1,0 +1,18 @@
+# Requirements for the LLM output eval tools
+# (eval_json.py, dev_check.py, prod_monitor.py)
+#
+# Python 3.10+ (uses `str | None` union syntax).
+# Everything else these scripts use — json, hashlib, argparse, dataclasses,
+# datetime, typing — is in the Python standard library, so it is not listed.
+#
+# Install the required dependency:
+#     pip install -r requirements.txt
+
+# --- Required: ROUGE-L metric (dev_check.py) + exact match ---------------
+rouge-score==0.1.2
+
+# --- Optional: BERTScore metric (prod_monitor.py) ------------------------
+# Only needed if you use metric "bertscore" (or "both"). Pulls torch (~700 MB).
+# The code runs fine without it — rouge and exact need no extra install.
+# To enable, uncomment the line below (or: pip install bert-score):
+# bert-score==0.3.13

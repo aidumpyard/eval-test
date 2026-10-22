@@ -1,0 +1,25 @@
+{
+  "id": "LOAN-4471",
+  "ticket_type": "credit_review",
+  "region": "EU",
+  "created_at": "2026-10-20",
+  "priority": "high",
+  "assessment": {
+    "decision": "approve",
+    "risk_level": "medium",
+    "summary": "The applicant has a stable income and the loan is approved with standard monitoring going forward."
+  },
+  "factors": [
+    "stable income",
+    "acceptable risk"
+  ],
+  "recommended_action": {
+    "primary": "Approve the loan and send the standard welcome documentation.",
+    "alternative": "Schedule a routine review in six months."
+  },
+  "follow_up": {
+    "owner": "retail_ops",
+    "due_in_days": 7
+  },
+  "confidence": 0.61
+}
